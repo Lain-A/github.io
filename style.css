@@ -9,17 +9,18 @@
 
       .results {
         font-family: 'Kalam';
-        font-size: 20px;
+        font-size: 25px;
         color: #4357df;
       }
 
       .button {
         background-color: white;
         font-family: 'Kalam';
-        font-color:green;
-        font-size: 20px;
+        color:purple;
+        font-size: 40px;
         padding: 10px 20px;
         text-align: center;
         border-radius: 8px;
+        border-color: black;    
         cursor: pointer;
       }
