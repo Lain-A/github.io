@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+.center {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  }
+  
+.results {
+  font-family: 'Kalam';
+  font-size: 20px;
+  color: #4357df;
+  } 
+
+button {
+  background-color: white;
+  font-family: 'Kalam';
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;  }
+
+</style>
+</head>
+<body>
+<div class=center>
+<button onclick="generate()">Générer, s'il vous plait</button>
+<p></p>
+
+<div class="results" id="gen"></div>
+
+</div>
+
+<script>
+var pronome = ["je", "tu", "il", "elle", "on", "nous", "vous", "ils", "elles"];
+var tense = ["présent", "passé composé", "imparfait", "passé récent", "passé simple", "plus-que-parfait", "passé antérieur", "futur proche", "futur simple", " futur antérieur"];
+
+function generate() 
+{
+document.getElementById("gen").innerHTML = "";
+var Temp = document.getElementById("gen").innerHTML;
+for (var n = 1; n <= 10; n++) 
+	{
+  	Temp += pronome[Math.floor(Math.random()*pronome.length)] + " + " + tense[Math.floor(Math.random()*tense.length)] +"<br>";
+  	document.getElementById("gen").innerHTML = Temp;
+	}
+}
+</script>
+</body>
+</html>
+
